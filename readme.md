@@ -2,7 +2,7 @@
 - You can run the project using:
     - Step 1: `cd src/problem2/swap-form`
     - Step 2: `npm install`
-    - Step 3: `npm start`
+    - Step 3: `npm run start`
 
 # Problem 3: Messy React
 - The file `problem3.tsx` is the file I copied from the challenge.
