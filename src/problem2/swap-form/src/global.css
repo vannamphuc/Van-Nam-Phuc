@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  /* Card Components */
+  .card-swap {
+    @apply flex flex-col p-4 border border-gray-200 rounded-2xl bg-white;
+  }
+
+  /* Input Components */
+  .input-amount {
+    @apply text-3xl font-normal bg-transparent border-0 outline-none w-full min-w-0 p-0 placeholder:text-gray-300;
+  }
+
+  .input-amount-filled {
+    @apply text-gray-900;
+  }
+
+  .input-amount-empty {
+    @apply text-gray-300;
+  }
+
+  /* Button Components */
+  .btn-token-selector {
+    @apply flex flex-row items-center justify-center gap-1.5 px-3 py-1.5 bg-white rounded-full shadow-sm cursor-pointer outline-none hover:bg-gray-50 transition-colors shrink-0;
+  }
+
+  .btn-swap-arrow {
+    @apply flex items-center justify-center w-10 h-10 bg-white border-4 border-gray-50 rounded-xl cursor-pointer outline-none hover:scale-110 active:scale-95 transition-transform shadow-sm;
+  }
+
+  .btn-submit {
+    @apply w-full py-3 px-4 font-semibold text-base rounded-xl transition-colors cursor-pointer outline-none flex items-center justify-center gap-2;
+  }
+
+  .btn-submit-primary {
+    @apply bg-[#FFD8DF] hover:bg-[#FFAAB8] text-zinc-900;
+  }
+
+  .btn-submit-disabled {
+    @apply bg-gray-200 text-gray-400 cursor-not-allowed;
+  }
+
+  /* Text Styles */
+  .text-label {
+    @apply text-sm font-medium text-gray-500;
+  }
+
+  .text-balance {
+    @apply text-xs font-normal text-gray-500;
+  }
+
+  .text-error {
+    @apply text-xs text-red-500;
+  }
+
+  .text-token-symbol {
+    @apply text-sm font-medium text-gray-900;
+  }
+
+  /* Layout Components */
+  .container-swap {
+    @apply flex flex-col gap-1 max-w-md mx-auto;
+  }
+
+  .container-swap-button {
+    @apply flex justify-center -my-5 z-10;
+  }
+
+  /* Loading Components */
+  .spinner {
+    @apply w-4 h-4 border-2 rounded-full animate-spin;
+  }
+
+  .spinner-primary {
+    @apply border-[#FFAAB8] border-t-transparent;
+  }
+
+  .spinner-loading {
+    @apply w-12 h-12 border-4 border-gray-200 border-t-green-600 rounded-full animate-spin mx-auto mb-4;
+  }
+
+  /* Modal/Backdrop */
+  .modal-backdrop {
+    @apply absolute inset-0 bg-black/50 backdrop-blur-sm;
+  }
+
+  .modal-container {
+    @apply fixed inset-0 flex items-center justify-center p-4;
+  }
+
+  /* Token Icon */
+  .token-icon {
+    @apply object-contain rounded-full;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  .animate-in {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+  }
+
+  .slide-in-from-top {
+    animation-name: slideInFromTop;
+  }
+
+  .slide-in-from-bottom {
+    animation-name: slideInFromBottom;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
