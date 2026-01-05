@@ -18,7 +18,7 @@ export const useTokenPrices = () => {
         }
         const data: Token[] = await response.json();
 
-        // Lọc tokens có price và loại bỏ duplicates
+        // Filter out tokens with invalid prices and remove duplicates
         const uniqueTokens = data.reduce((acc, token) => {
           if (token.price && token.price > 0) {
             const existing = acc.find((t) => t.currency === token.currency);

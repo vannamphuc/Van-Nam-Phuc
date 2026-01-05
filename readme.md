@@ -1,10 +1,10 @@
-# 99Tech Code Challenge #1 #
+# Problem 2: Fancy Form
+- You can run the project using:
+    - Step 1: `cd src/problem2/swap-form`
+    - Step 2: `npm install`
+    - Step 3: `npm start`
 
-Note that if you fork this repository, your responses may be publicly linked to this repo.  
-Please submit your application along with the solutions attached or linked.   
-
-It is important that you minimally attempt the problems, even if you do not arrive at a working solution.
-
-## Submission ##
-You can either provide a link to an online repository, attach the solution in your application, or whichever method you prefer.
-We're cool as long as we can view your solution without any pain.
+# Problem 3: Messy React
+- The file `problem3.tsx` is the file I copied from the challenge.
+- The file `ISSUES_AND_FIXES.md` contains the list of issues I found in the code along with their fixes.
+- The file problem3-fixed.tsx contains the corrected code after applying all the fixes mentioned in `ISSUES_AND_FIXES.md`.
